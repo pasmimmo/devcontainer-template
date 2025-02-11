@@ -1,0 +1,25 @@
+{
+	"name": "Java",
+	"image": "mcr.microsoft.com/devcontainers/java:1-17-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"postCreateCommand": "mvn --version",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vmware.vscode-boot-dev-pack",
+				"redhat.fabric8-analytics",
+				"vscjava.vscode-java-pack",
+				"EditorConfig.EditorConfig",
+				"dracula-theme.theme-dracula",
+				"SonarSource.sonarlint-vscode"
+			]
+		}
+	}
+}
