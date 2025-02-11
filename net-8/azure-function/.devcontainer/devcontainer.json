@@ -1,0 +1,19 @@
+{
+    "name": "pasmimmo-az-fa-net8",
+    "build": {
+        // Path is relative to the devcontainer.json file.
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.vscodeintellicode-csharp",
+                "ms-azuretools.vscode-azurefunctions",
+                "ms-dotnettools.csdevkit",
+                "Azurite.azurite"
+            ]
+        }
+    }
+}
