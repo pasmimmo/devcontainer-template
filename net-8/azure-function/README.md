@@ -3,21 +3,40 @@
 This project contains an example of an Azure Function written in C# with .NET 8 in-process.
 to better understand differences between isolated and in proc model you can referr to [this microsoft article](https://learn.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-in-process-differences)
 
+## Get started
 
-## Project Structure
+### Dev Container quick start
+0. docker have to be installed and running
+1. clone repo
+2. navogate to `/devcontainer-template/net-8/azure-function/`
+3. open in vscode with `code .`
+4. open vscode commands (`ctrl` + `shift` + `p`)
+5. select `>Dev Containers: Rebuild and Reopen in Container`
+6. wait for image building (only first time) and vscode windows reload inside container
+
+happy coding
+
+### Dev Container Configuration notes
+
+This project uses a Dev Container to simplify development. 
+
+The Dev Container configuration is located in `.devcontainer/`.
+
+As you can see, proposed dev container uses a semi-custom docker image based on debian 12 with Function Core Tools installed.
+
+The `devcontainer.json` file specifies the Dev Container settings, including workspace mounts and necessary Visual Studio Code extensions.
+
+
+### Azure Function Project Structure
 
 - `src/example/`: Contains the function's source code.
 - `src/example/triggers/HttpTrigger1.cs`: Implementation of the HTTP trigger function.
 - `src/example/host.json`: Host configuration.
 - `src/example/local.settings.json`: Local settings configuration.
 
-## Dev Container Configuration
 
-This project uses a Dev Container to simplify development. The Dev Container configuration is located in `.devcontainer/`.
-As you can see, proposed dev container uses a semi-custom docker image based on debian 12 with Function Core Tools installed.
-The `devcontainer.json` file specifies the Dev Container settings, including workspace mounts and necessary Visual Studio Code extensions.
 
-## Local Settings Configuration
+### Azure Function Local Settings Configuration
 
 The `local.settings.json` file contains the local settings for running the function. Here is an explanation of the parameters:
 
@@ -46,6 +65,7 @@ Sometimes the Docker image may have permission issues with the .NET 8 in-process
 ```sh
 sudo chmod +x /usr/lib/azure-functions-core-tools-4/in-proc8/func
 ```
+## Notes & appendix
 
 ### Running the Function
 
