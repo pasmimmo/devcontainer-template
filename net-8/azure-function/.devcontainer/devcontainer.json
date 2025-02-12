@@ -12,7 +12,8 @@
                 "ms-dotnettools.vscodeintellicode-csharp",
                 "ms-azuretools.vscode-azurefunctions",
                 "ms-dotnettools.csdevkit",
-                "Azurite.azurite"
+                "Azurite.azurite",
+                "EditorConfig.EditorConfig"
             ]
         }
     }
